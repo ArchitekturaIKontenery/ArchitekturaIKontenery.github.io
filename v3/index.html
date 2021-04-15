@@ -30,7 +30,7 @@
    <!-- ico fonts -->
    <link rel="stylesheet" href="css/xsIcon.css">
    <!-- Template styles-->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css?v1">
    <!-- Responsive styles-->
    <link rel="stylesheet" href="css/responsive.css">
 
@@ -221,8 +221,6 @@
          </div><!-- container end-->
       </section>
       <!-- ts intro end-->
-
-
       <!-- ts speaker start-->
       <section id="ts-speakers" class="ts-speakers" style="background-image:url('./images/speakers/speaker_bg.png')">
          <div class="container">
@@ -235,14 +233,14 @@
                </div><!-- col end-->
             </div><!-- row end-->
             <div class="row">
-               <!-- speaker start-->
+               <!-- speaker start 1-->
                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
                   <div class="ts-speaker">
                      <div class="speaker-img">
                         <img class="img-fluid" src="images/speakers/lukasz.jpg" alt="">
                         <a href="#popup_1" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
-                                    <i class="icon icon-plus"></i>
-                                </a>
+                           <i class="icon icon-plus"></i>
+                        </a>
                      </div>
                      <div class="ts-speaker-info">
                         <h3 class="ts-title"><a href="#">Łukasz Kałużny</a></h3>
@@ -280,7 +278,52 @@
                      </div><!-- row end-->
                   </div><!-- popup end-->
                </div> <!-- col end-->
-               <!-- speaker end-->
+               <!-- speaker end 1-->
+               <!-- speaker start 2-->
+               <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+                  <div class="ts-speaker">
+                     <div class="speaker-img">
+                        <img class="img-fluid" src="images/speakers/cloudowski.jpg" alt="">
+                        <a href="#popup_2" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                           <i class="icon icon-plus"></i>
+                        </a>
+                     </div>
+                     <div class="ts-speaker-info">
+                        <h3 class="ts-title"><a href="#">Tomasz Cholewa</a></h3>
+                        <p>
+                           Head of Cloud Infrastructure at DevSkiller
+                        </p>
+                     </div>
+                  </div>
+                  <!-- popup start-->
+                  <div id="popup_2" class="container ts-speaker-popup mfp-hide">
+                     <div class="row">
+                        <div class="col-lg-6">
+                           <div class="ts-speaker-popup-img">
+                              <img src="images/speakers/cloudowski.jpg" alt="">
+                           </div>
+                        </div><!-- col end-->
+                        <div class="col-lg-6">
+                           <div class="ts-speaker-popup-content">
+                              <h3 class="ts-title">Tomasz Cholewa</h3>
+                              <span class="speakder-designation">Head of Cloud Infrastructure at DevSkiller</span>
+                              <img class="company-logo" height="20px" src="images/sponsors/devskiller_logo_4k.webp" alt="">
+                              <p>
+                                 Orędownik prawdziwego DevOps rozumianego bardziej jako filozofii
+                                 opartej na procesach wspieranych technologią i kulturą organizacji
+                                 niż tylko marketingowego buzzwordu.
+                              </p>
+                              <div class="ts-speakers-social">
+                                 <a href="https://www.youtube.com/channel/UC5bvfIR-aRMq4jfsoWvPlVQ" target="_blank"><i class="fa fa-youtube"></i></a>
+                                 <a href="https://twitter.com/tomasz_cholewa" target="_blank"><i class="fa fa-twitter"></i></a>
+                                 <a href="https://www.linkedin.com/in/tomaszcholewa/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                              </div>
+                           </div><!-- ts-speaker-popup-content end-->
+                        </div><!-- col end-->
+                     </div><!-- row end-->
+                  </div><!-- popup end-->
+               </div> <!-- col end-->
+               <!-- speaker end 2-->
                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
                   <div class="ts-speaker">
                      <div class="speaker-img">
@@ -428,8 +471,7 @@
                         <div role="tabpanel" class="tab-pane active" id="date1">
                            <div class="schedule-listing">
                               <div class="schedule-slot-time">
-                                 <span> 9.00 - 10.00</span>
-                                 Sesja
+                                 <span>Godziny TBA</span>
                               </div>
                               <div class="schedule-slot-info">
                                  <a href="#">
@@ -444,6 +486,24 @@
                                     <p>Czym jest DAPR? To nowe "dziecko" ze stajni MS, który płynie powoli do CNCF.
                                     Jego zadaniem jest pomoc programistom w tworzeniu odpornych aplikacji
                                     rozproszonych opartych na zdarzeniach.</p>
+                                 </div>
+                                 <!--Info content end -->
+                              </div><!-- Slot info end -->
+                           </div>
+                           <!--schedule-listing end -->
+                           <div class="schedule-listing">
+                              <div class="schedule-slot-time">
+                                 <span>Godziny TBA</span>
+                              </div>
+                              <div class="schedule-slot-info">
+                                 <a href="#">
+                                    <img class="schedule-slot-speakers" src="images/speakers/cloudowski.jpg" alt="">
+                                 </a>
+                                 <div class="schedule-slot-info-content">
+                                    <h3 class="schedule-slot-title">Chcę to na produkcji na ASAPie!
+                                       <strong>@ Tomasz Cholewa</strong>
+                                    </h3>
+                                    <p>Jak efektywnie budować i wdrażać skonteneryzowane aplikacje na Kubernetes</p>
                                  </div>
                                  <!--Info content end -->
                               </div><!-- Slot info end -->
