@@ -666,6 +666,35 @@
 
       <!-- Template custom -->
       <script src="js/main.js?v2"></script>
+
+      <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+      <script>
+         window.addEventListener("load", function () {
+             window.cookieconsent.initialise({
+                 palette: {
+                     popup: {
+                         background: "#FFFFFF",
+                         text: "#3b3b3b",
+                         border: "#bfbfbf",
+                     },
+                     button: {
+                         background: "#2496EE",
+                         text: "#ffffff",
+                     },
+                 },
+                 theme: "classic",
+                 position: "top-left",
+                 content: {
+                     message: "Na tej stronie używamy ciasteczek",
+                     dismiss: "Rozumiem!",
+                     link: "(więcej)",
+                     href: "policy.html",
+                 },
+             });
+         });
+      </script>
       <!-- MailerLite Universal -->
       <script>
         (function (m, a, i, l, e, r) {
