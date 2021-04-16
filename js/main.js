@@ -59,7 +59,7 @@ jQuery(function ($) {
 
    if ($('.countdown').length > 0) {
       $(".countdown").jCounter({
-         date: '2021-05-17 09:00:00',
+         date: '2021-05-17T09:00:00+02:00',
          fallback: function () {
             console.log("count finished!")
          }
