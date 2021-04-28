@@ -87,7 +87,7 @@
    <!-- ico fonts -->
    <link rel="stylesheet" href="css/xsIcon.css?v1">
    <!-- Template styles-->
-   <link rel="stylesheet" href="css/style.css?v1">
+   <link rel="stylesheet" href="css/style.css?v2">
    <!-- Responsive styles-->
    <link rel="stylesheet" href="css/responsive.css?v1">
 
@@ -306,6 +306,52 @@
                </div><!-- col end-->
             </div><!-- row end-->
             <div class="row">
+               <!-- speaker start 0-->
+               <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+                  <div class="ts-speaker">
+                     <div class="speaker-img">
+                        <img class="img-fluid" src="images/speakers/michael.jpg" alt="">
+                        <a href="#popup_michael" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                           <i class="icon icon-plus"></i>
+                        </a>
+                     </div>
+                     <div class="ts-speaker-info">
+                        <h3 class="ts-title"><a href="#popup_michael">Michael Perry</a></h3>
+                        <p>
+                           The author of The Art of Immutable Architecture
+                        </p>
+                     </div>
+                  </div>
+                  <!-- popup start-->
+                  <div id="popup_michael" class="container ts-speaker-popup mfp-hide">
+                     <div class="row">
+                        <div class="col-lg-6">
+                           <div class="ts-speaker-popup-img">
+                              <img src="images/speakers/michael.jpg" alt="">
+                           </div>
+                        </div><!-- col end-->
+                        <div class="col-lg-6">
+                           <div class="ts-speaker-popup-content">
+                              <h3 class="ts-title">Michael Perry</h3>
+                              <span class="speakder-designation">The author of The Art of Immutable Architecture</span>
+                              <p>
+                                 Michael wrote The Art of Immutable Architecture, a book on applying mathematics to building distributed systems.
+                                 Learn more at <a href="https://immutablearchitecture.com">https://immutablearchitecture.com</a>.
+                                 <br/>Michael has recorded Pluralsight courses on Distributed Systems, XAML Patterns, and Cryptography, in addition to Provable Code.
+                                 Formerly a Microsoft MVP for seven years, he maintains the spoon-bending Assisticant and Jinaga open-source libraries.
+                                 You can find his videos about distributed systems at <a href="https://historicalmodeling.com">historicalmodeling.com</a>.
+                                 And he helps his clients at Improving benefit from the power of software mathematics.
+                              </p>
+                              <div class="ts-speakers-social">
+                                 <a href="https://twitter.com/michaellperry" target="_blank"><i class="fa fa-twitter"></i></a>
+                                 <a href="http://qedcode.com/" target="_blank"><i class="fa fa-globe"></i></a>
+                              </div>
+                           </div><!-- ts-speaker-popup-content end-->
+                        </div><!-- col end-->
+                     </div><!-- row end-->
+                  </div><!-- popup end-->
+               </div> <!-- col end-->
+               <!-- speaker end 0-->
                <!-- speaker start 1-->
                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
                   <div class="ts-speaker">
@@ -591,33 +637,6 @@
                   </div><!-- popup end-->
                </div> <!-- col end-->
                <!-- speaker end 6-->
-
-               <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
-                  <div class="ts-speaker">
-                     <div class="speaker-img">
-                        <img class="img-fluid" src="images/speakers/blank.jpg" alt="">
-                     </div>
-                     <div class="ts-speaker-info">
-                        <h3 class="ts-title">Już niedługo</h3>
-                        <p>
-                           TBA
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
-                  <div class="ts-speaker">
-                     <div class="speaker-img">
-                        <img class="img-fluid" src="images/speakers/blank.jpg" alt="">
-                     </div>
-                     <div class="ts-speaker-info">
-                        <h3 class="ts-title">Już niedługo</h3>
-                        <p>
-                           TBA
-                        </p>
-                     </div>
-                  </div>
-               </div>
             </div><!-- row end-->
          </div><!-- container end-->
 
@@ -864,18 +883,42 @@
                            <!--schedule-listing end -->
                            <div class="schedule-listing">
                               <div class="schedule-slot-time">
-                                 <span>10.00 - 17:00</span>
-                                 Już niedługo
+                                 <span>Godziny TBA</span>
                               </div>
                               <div class="schedule-slot-info">
-                                 <a href="#">
-                                    <img class="schedule-slot-speakers" src="images/speakers/blank.jpg" alt="">
+                                 <a href="#popup_michael" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                                    <img class="schedule-slot-speakers" src="images/speakers/michael.jpg" alt="">
                                  </a>
                                  <div class="schedule-slot-info-content">
-                                    <h3 class="schedule-slot-title">Już niedługo
-                                       <strong>@ TBA</strong>
+                                    <h3 class="schedule-slot-title">
+                                       Kubernetes. Now What? Data Management in a Distributed Cluster
+                                       <a href="#popup_michael" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                                          <strong>@ Michael Perry</strong>
+                                       </a>
                                     </h3>
-                                    <p>Kolejne sesje zostaną ogłoszone już niedługo</p>
+                                    <p>
+                                       You have a cluster. You can scale up and down at a moment's notice. You can roll updates without taking down your services. So are all your problems solved?
+                                       <br/>Not quite. You still have the issue of keeping your microservices in sync.
+                                       You want each service to be able to make its own decisions autonomously.
+                                       They therefore need to store their own copy of the data that they need.
+                                       But that copy is not always up-to-date. To achieve consistency at scale, you need to design messages that will let pods converge within a reasonable time.
+                                       Those messages need to be idempotent so that repeats do not cause duplication.
+                                       And they need to be commutative so that pods will converge even after receiving messages in different orders.
+                                       These are not trivial properties. They are difficult to achieve in a traditional mutation-based paradigm.
+                                       But if your model was immutable, then you would get these properties almost for free.
+                                       Every copy of an immutable record is just as good as any other, and it will never be out-of-date.
+                                       The trick then is how to model your application using only immutable records.
+                                       <br/> Let me show you how.
+                                       <br/>We'll begin by analyzing your problem domain using a causal historical model.
+                                       You will see how workflow patterns take us beyond state-machine thinking and solve technical problems and business problems simultaneously.
+                                       Then we will map that immutable model into messages so that we can deploy it to our cluster.
+                                       Use AMQP, Kafka, or any messaging infrastructure that you are comfortable with.
+                                       Finally, we will employ the sidecar pattern to translate the immutable model back into the mutation-based entities that our application containers expect.
+                                       <br/>Kubernetes is a wonderful tool for managing workloads.
+                                       Now that you have it, apply the patterns of immutable architecture to manage data within your distributed cluster.
+
+
+                                    </p>
                                  </div>
                                  <!--Info content end -->
                               </div><!-- Slot info end -->

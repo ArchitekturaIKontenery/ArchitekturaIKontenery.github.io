@@ -1986,6 +1986,7 @@ img.pull-right {
   -ms-border-radius: 50%;
   bottom: 0;
   margin: auto;
+  margin-top: 40px;
 }
 
 .schedule-listing .schedule-slot-info .schedule-slot-title {
