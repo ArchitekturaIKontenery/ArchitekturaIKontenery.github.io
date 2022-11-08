@@ -3,6 +3,13 @@
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:16-bullseye",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"shuffle-dev.shuffle-dev"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
