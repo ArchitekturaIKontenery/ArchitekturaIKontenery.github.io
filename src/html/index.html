@@ -743,8 +743,9 @@
 
               </div>
               <ul role="list" class="flex space-x-5">
+                <template x-if="speaker[selectedSpeaker].tw"></template>
                 <li>
-                  <a x-bind:href="speaker[selectedSpeaker].ln" class="text-gray-400 hover:text-gray-500"
+                  <a x-bind:href="speaker[selectedSpeaker].tw" class="text-gray-400 hover:text-gray-500"
                     target="_blank">
                     <span class="sr-only">Twitter</span>
                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -753,9 +754,10 @@
                     </svg>
                   </a>
                 </li>
-                <template x-if="speaker[selectedSpeaker].tw">
+                </template>
+                <template x-if="speaker[selectedSpeaker].ln">
                   <li>
-                    <a x-bind:href="speaker[selectedSpeaker].tw" class="text-gray-400 hover:text-gray-500"
+                    <a x-bind:href="speaker[selectedSpeaker].ln" class="text-gray-400 hover:text-gray-500"
                       target="_blank">
                       <span class="sr-only">LinkedIn</span>
                       <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
