@@ -17,6 +17,7 @@
     "build-js": "esbuild src/js/main.js --bundle --minify --target=es2017 --outfile=public/js/main.js",
     "watch": "npm-run-all build --parallel watch-templates watch-css watch-js browsersync",
     "watch-templates": "cpx --watch -v \"src/html/*.html\" public/",
+    "watch-assets": "cpx --watch -v \"src/assets/**/*.*\" public/",
     "watch-css": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify --watch",
     "watch-js": "esbuild src/js/main.js --bundle --sourcemap=inline --target=es2017 --outfile=public/js/main.js --watch"
   },
