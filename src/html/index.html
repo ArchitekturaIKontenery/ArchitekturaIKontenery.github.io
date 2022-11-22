@@ -122,16 +122,14 @@
   x-data="{ modalBioShow: false, selectedSpeaker: 'Kowalski', speaker: speaker() }">
   <div class="">
     <!--Section HEADER-->
-    <section class="overflow-hidden"
-      style="background: url(images/bg.webp) no-repeat; background-size: cover;">
+    <section class="overflow-hidden" style="background: url(images/bg.webp) no-repeat; background-size: cover;">
       <section>
         <div class="flex items-center justify-between px-8 py-5">
           <div class="w-auto">
             <div class="flex flex-wrap items-center">
               <div class="w-auto mr-14">
                 <a href="#">
-                  <img src="images/architektura_i_kontenery_darkmode.webp"
-                    alt="Architektura i kontenery">
+                  <img src="images/architektura_i_kontenery_darkmode.webp" alt="Architektura i kontenery">
                 </a>
               </div>
             </div>
@@ -169,8 +167,7 @@
                 <div class="flex items-center justify-between -m-2">
                   <div class="w-auto p-2">
                     <a class="inline-block" href="#">
-                      <img src="images/architektura_i_kontenery.webp"
-                        alt="Architektura i kontenery">
+                      <img src="images/architektura_i_kontenery.webp" alt="Architektura i kontenery">
                     </a>
                   </div>
                   <div class="w-auto p-2">
@@ -788,6 +785,38 @@
     </div>
   </div>
   <!-- modalBioShow -->
+  <!-- chat fb -->
+  <!-- Messenger Wtyczka czatu Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Wtyczka czatu code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "103276299145115");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v15.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- chat fb -->
 </body>
 
 </html>
