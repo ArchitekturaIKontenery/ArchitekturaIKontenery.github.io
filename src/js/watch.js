@@ -14,12 +14,12 @@ window.Alpine = Alpine;
 
 var sessions;
 Alpine.start();
-fetch('/watch-2022.json')
+fetch('/watch-2022.json', { cache: "no-store" })
   .then((response) => response.json())
   .then((data) => { sessions = data; whichSession(); });
 
 setInterval(function () {
-  fetch('/watch-2022.json')
+  fetch('/watch-2022.json', { cache: "no-store" })
     .then((response) => response.json())
     .then((data) => {
       sessions = data;
