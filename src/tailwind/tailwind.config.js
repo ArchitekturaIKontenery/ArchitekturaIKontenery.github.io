@@ -15,7 +15,10 @@ module.exports = {
     colors: {
       current: 'currentColor',
       transparent: 'transparent',
-
+      
+      facebook: '#4267B2',
+      twitter: '#00acee',
+      linkedin: '#0072b1',
       black: '#000',
       white: '#fff',
 

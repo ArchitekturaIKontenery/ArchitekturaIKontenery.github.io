@@ -16,7 +16,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <script src="js/main.js"></script>
+  <script defer src="js/watch.js"></script>
   <script src="https://kit.fontawesome.com/14fd7d664a.js" crossorigin="anonymous"></script>
 
   <!-- Google Tag Manager -->
@@ -83,36 +83,143 @@
   </noscript>
 </head>
 
-<body class="antialiased bg-body text-body font-body">
+<body class="antialiased bg-body text-body font-body"
+  x-data="{ title: '', url: '', name: '', headline: '', isLoading: true, sessions: []}">
+
   <div class="">
     <!--Section HEADER-->
-    <!--Section HEADER-->
-    <section class="pt-10 pb-10 overflow-hidden">
-      <div class="container mx-auto px-4">
-        <h2 class="mb-5 font-heading font-semibold text-6xl sm:text-7xl text-gray-900 text-center">Architektura i
-          kontenery 2022</h2>
-        <h3 class="mb-5 font-heading font-semibold text-4xl sm:text-5xl text-gray-900 text-center">Startujemy o 09:15 w
-          poniedziałek 12 grudnia‼️ 😎</h3>
-        <p class="text-center">
-          Pełna agenda 👉 <a href="/#agenda" class="underline">tutaj</a> 👈, w międzyczasie możesz nas
-          zaobserwować na socjalach poniżej ⬇️
-        </p>
-        <p class="text-center mb-5">p.s. Jeżeli oglądasz to w poniedziałek po 9:15 i widzisz gif, to odśwież stronę, bo
-          zaczęliśmy!</p>
-        <div class="flex justify-center">
-          <a class="m-10 hover:text-blue-600" href="https://www.facebook.com/architekturaikontenery/" target="_blank">
-            <i class="fa fa-facebook fa-2x"></i>
-          </a>
-          <a class="m-10 hover:text-blue-600" href="https://www.linkedin.com/company/architekturaikontenery/"
-            target="_blank">
-            <i class="fa fa-linkedin fa-2x"></i>
-          </a>
-        </div>
-        <div class="grid mx-auto place-items-center">
-          <img src="images/theoffice.webp">
+    <section class="overflow-hidden">
+      <div class="px-6 py-3 lg:py-6 bg-gray-900 items-center mx-auto">
+        <div class="mx-auto">
+          <h1 class="text-white">Architektura i kontenery 2022</h1>
         </div>
       </div>
     </section>
+    <!--Section HEADER-->
+
+    <!--Section WATCH-->
+
+    <section class="pt-5 pb-5 overflow-hidden"
+      @items-load.window="title = $event.detail.selectedSession.title; url = $event.detail.selectedSession.url; name = $event.detail.selectedSession.name; headline = $event.detail.selectedSession.headline; isLoading = $event.detail.isLoading">
+      <div class="absolute inset-0 flex justify-center items-center z-10" x-show="isLoading"
+        x-transition:leave.duration.5000ms x-transition.opacity>
+        <svg class="w-12 h-12 animate-spin text-indigo-400" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4.75V6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+          </path>
+          <path d="M17.1266 6.87347L16.0659 7.93413" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path d="M19.25 12L17.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path d="M17.1266 17.1265L16.0659 16.0659" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path d="M12 17.75V19.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+          </path>
+          <path d="M7.9342 16.0659L6.87354 17.1265" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path d="M6.25 12L4.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path d="M7.9342 7.93413L6.87354 6.87347" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4 transition ease-out duration-1000" :class="!isLoading ? '' : 'blur-lg'">
+        <h2 class="mb-5 font-heading font-semibold text-4xl sm:text-5xl text-gray-900 text-center" x-text="title"></h2>
+        <h3 class="mb-5 font-heading font-semibold text-2xl sm:text-3xl text-gray-700 text-center"
+          x-text="name + ' @ ' + headline"></h3>
+        <div class="w-3/4 mx-auto pb-5">
+          <div class="aspect-h-9 aspect-w-16">
+            <iframe class="h-full w-full" x-bind:src="url" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="font-heading font-semibold text-2xl sm:text-3xl text-gray-700 text-center">
+          <p>Pochwal się, że oglądasz z nami! </p>
+          <div class="flex justify-center">
+            <a class="m-10 hover:text-facebook"
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Farchitekturaikontenery.pl"
+              target="_blank">
+              <i class="fa fa-facebook fa-2x"></i>
+            </a>
+            <a class="m-10 hover:text-linkedin"
+              href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Farchitekturaikontenery.pl"
+              target="_blank">
+              <i class="fa fa-linkedin fa-2x"></i>
+            </a>
+            <a class="m-10 hover:text-twitter"
+              href="https://www.twitter.com/intent/tweet?url=https%3A%2F%2Farchitekturaikontenery.pl" target="_blank">
+              <i class="fa fa-twitter fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section WATCH-->
+
+    <!-- AGENDA -->
+    <section class="overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="border-b border-gray-100"></div>
+      </div>
+    </section>
+
+
+    <section class="py-5 overflow-hidden" id="agenda">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -m-8">
+          <div class="w-full p-8">
+            <h2 class="font-heading font-semibold text-center text-6xl sm:text-7xl text-gray-900">Agenda</h2>
+          </div>
+          <div class="w-full p-8">
+            <div>
+              <div class="h-0.5 bg-gradient-cyan"></div>
+              <template x-for="session in sessions" :key="session.time"
+                @items-load.window="sessions = $event.detail.agenda">
+                <div>
+                  <!-- row -->
+                  <div class="flex flex-wrap items-center py-7 -m-2">
+                    <div class="w-full md:w-3/4 p-2">
+                      <div class="flex flex-wrap md:flex-nowrap">
+                        <div class="w-auto p-2">
+                          <h3 class="font-heading font-bold text-xl text-gray-800" x-html="session.agendaTime"></h3>
+                        </div>
+                        <div class="w-auto p-2">
+                          <h3 class="font-heading font-bold text-xl text-gray-900" x-text="session.title"></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full md:w-1/4 p-2">
+                      <div class="flex flex-wrap items-center justify-between">
+                        <div class="w-3/4 2xl:w-auto p-2">
+                          <p class="text-lg text-gray-900" x-html="session.name.split(',').join('<br>')"></p>
+                        </div>
+                        <div class="w-auto p-2">
+                          <button
+                            class="group relative font-heading py-2 px-4 block w-full md:w-auto text-base text-white font-medium bg-gray-900 overflow-hidden rounded-lg"
+                            @click="window.open(session.urlWatch, '_blank')">
+                            <div
+                              class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full bg-gray-800 transition ease-in-out duration-500">
+                            </div>
+                            <p class="relative z-10">Oglądaj</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-0.5 bg-gradient-cyan"></div>
+                  <!-- row -->
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
     <section class="pt-24 overflow-hidden">
       <div class="container mx-auto px-4">
         <a href="/"><img class="mx-auto mb-16" src="images/architektura_i_kontenery.webp" alt=""></a>
@@ -130,20 +237,6 @@
       </div>
     </section>
   </div>
-  <!-- MailerLite Universal -->
-  <script>
-    (function (m, a, i, l, e, r) {
-      m['MailerLiteObject'] = e; function f() {
-        var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
-      }
-      f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
-      var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
-      _.parentNode.insertBefore(r, _);
-    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-    var ml_account = ml('accounts', '1685044', 'p7i8i7p7f9', 'load');
-  </script>
-  <!-- End MailerLite Universal -->
 </body>
 
 </html>
