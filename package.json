@@ -13,7 +13,7 @@
     "css-compile": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.css",
     "css-minified": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify",
     "css": "npm-run-all --sequential css-*",
-    "build": "npm-run-all --sequential clean copy-* build-js css",
+    "build": "npm-run-all --sequential clean copy-* build-js build-js-watch css",
     "build-js": "esbuild src/js/main.js --bundle --minify --target=es2017 --outfile=public/js/main.js",
     "build-js-watch": "esbuild src/js/watch.js --bundle --minify --target=es2017 --outfile=public/js/watch.js",
     "watch": "npm-run-all build --parallel watch-* browsersync",
