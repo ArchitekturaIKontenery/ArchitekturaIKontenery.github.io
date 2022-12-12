@@ -95,11 +95,30 @@
         </div>
       </div>
     </section>
+    <section class="pt-10 pb-10 overflow-hidden">
+      <div class="container mx-auto px-4">
+        <h2 class="mb-5 font-heading font-semibold text-6xl sm:text-7xl text-gray-900 text-center">Architektura i
+          kontenery 2022</h2>
+        <h3 class="mb-5 font-heading font-semibold text-4xl sm:text-5xl text-gray-900 text-center">Dzięki za udział!😎
+        </h3>
+        <p class="text-center mb-5">
+          Jeżeli szukasz materiałów z konferencji, to opublikujemy je niedługo! Zapisz się już teraz, aby dostać info,
+          jak tylko się pojawią.
+        </p>
+        <h3 class="mb-5 font-heading font-semibold text-4xl sm:text-5xl text-gray-900 text-center">👉 <a
+            class="underline" href="javascript:;" onclick="ml_account('webforms', '5835194', 'c4f1h6', 'show')">Chcę
+            dostęp do
+            materiałów</a> 👈</h3>
+        <div class="grid mx-auto place-items-center">
+          <img src="images/theoffice.webp">
+        </div>
+      </div>
+    </section>
     <!--Section HEADER-->
 
     <!--Section WATCH-->
 
-    <section class="pt-5 pb-5 overflow-hidden"
+    <section class="pt-5 pb-5 overflow-hidden hidden"
       @items-load.window="title = $event.detail.selectedSession.title; url = $event.detail.selectedSession.url; name = $event.detail.selectedSession.name; headline = $event.detail.selectedSession.headline; isLoading = $event.detail.isLoading">
       <div class="absolute inset-0 flex justify-center items-center z-10" x-show="isLoading"
         x-transition:leave.duration.5000ms x-transition.opacity>
@@ -166,14 +185,14 @@
     <!--Section WATCH-->
 
     <!-- AGENDA -->
-    <section class="overflow-hidden">
+    <section class="overflow-hidden hidden">
       <div class="container mx-auto px-4">
         <div class="border-b border-gray-100"></div>
       </div>
     </section>
 
 
-    <section class="py-5 overflow-hidden" id="agenda">
+    <section class="py-5 overflow-hidden hidden" id="agenda">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -m-8">
           <div class="w-full p-8">
