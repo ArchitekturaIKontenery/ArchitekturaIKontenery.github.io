@@ -36,12 +36,8 @@ function whichSession() {
   var currentSeconds = String(currentTime.getSeconds()).padStart(2, '0');
   currentTimeString = `${currentHour}:${currentMinutes}:${currentSeconds}`;
   sessions.agenda.forEach(element => {
-    if (currentDay == 12) {
-      if (element.time <= currentTimeString) {
-        selectedSession = element;
-      }
-    } else {
-      selectedSession = sessions.agenda[0];
+    if (element.time <= currentTimeString) {
+      selectedSession = element;
     }
   });
   let event = new CustomEvent('items-load', {
