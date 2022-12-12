@@ -23,7 +23,7 @@
             "headline": "Solution Architect mBank",
             "time": "10:29:00",
             "title": "Budowa platformy orkiestracji kontenerów",
-            "url": "https://www.youtube.com/embed/flxBfvQ7FSE&autoplay=1",
+            "url": "https://www.youtube.com/embed/flxBfvQ7FSE?autoplay=1",
             "urlWatch": "https://www.youtube.com/watch?v=flxBfvQ7FSE",
             "agendaTime": "10:30&nbsp-&nbsp11:25"
         },
@@ -32,7 +32,7 @@
             "headline": "Tech Lead @ Jit Team",
             "time": "11:28:00",
             "title": "Zunifikowane środowisko w Kubernetes z użyciem Terraform",
-            "url": "https://www.youtube.com/embed/zWuShZ8_j30&autoplay=1",
+            "url": "https://www.youtube.com/embed/zWuShZ8_j30?autoplay=1",
             "urlWatch": "https://www.youtube.com/watch?v=zWuShZ8_j30",
             "agendaTime": "11:30&nbsp-&nbsp12:25"
         },
@@ -41,7 +41,7 @@
             "headline": "VP of Engineering at Spacelift",
             "time": "12:28:00",
             "title": "Najlepsze praktyki tworzenia zasobów chmurowych z użyciem infrastructure-as-a-code na przykładzie Terraforma",
-            "url": "https://www.youtube.com/embed/HZZK8B-AJFo&autoplay=1",
+            "url": "https://www.youtube.com/embed/HZZK8B-AJFo?autoplay=1",
             "urlWatch": "https://www.youtube.com/watch?v=HZZK8B-AJFo",
             "agendaTime": "13:00&nbsp-&nbsp13:55"
         },
@@ -50,7 +50,7 @@
             "headline": "Masters of Containers",
             "time": "13:58:00",
             "title": "Popołudniowa Kawa - Q&A na temat architektury i systemów rozproszonych",
-            "url": "https://www.youtube.com/embed/otcdpk63g2M&autoplay=1",
+            "url": "https://www.youtube.com/embed/otcdpk63g2M?autoplay=1",
             "urlWatch": "https://www.youtube.com/watch?v=otcdpk63g2M",
             "agendaTime": "14:00&nbsp-&nbsp14:55"
         }
