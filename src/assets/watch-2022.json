@@ -1,100 +1,4 @@
 {
-    "Cholewa": {
-        "img": "images/speakers/cloudowski.jpg",
-        "title": "∞ DevOps Growth Expert",
-        "ln": "https://www.linkedin.com/in/cloudowski/",
-        "tw": "https://twitter.com/cloudowski",
-        "bio": [
-            "Tomasz jest ekspertem DevOps i architektem nowoczesnych środowisk opartych o chmurę, kontenery oraz swoją osobistą pasję do mądrej automatyzacji.",
-            "Uczy i pomaga innym zdobyć niezbędne umiejętności z obszaru DevOps i Cloud Native, aby pomóc im w rozwoju ich kariery. Fascynuje go swój rozwój osobisty, ale też uwalnianie potencjału drzemiącego w innych. Utworzył darmowy kurs “Kubernetes po polsku”, gdyż uważa, że wiedza o tym rewolucyjnym projekcie powinna być dostępna dla każdego.",
-            "Nie wierzy w narzędzia i uznaje technologie jedynie jako drogę do rozwiązywania realnych problemów. Swoją introwertyczną naturę przełamuje dzieląc się swoją wiedzą podczas wystąpień, prezentacji oraz szkoleń. Niepoprawny perfekcjonista, który ciągle widzi potrzebę usprawniania.",
-            "Nie znosi cebuli i ściemy. Uwielbia szczerość, relacje oraz dobry sernik"
-        ],
-        "sessionTitle": "Zaskakujące funkcje Kubernetes, które musisz poznać",
-        "sessionDescription": [
-            "Kubernetes skończył już 8 lat i zagościł na naszych środowiskach na stałe. Pomimo upływu lat wciąż prężnie się rozwija i z każdą kolejną wersją nabywa coraz bardziej zaawansowanych funkcji z obszaru sieci, bezpieczeństwa, zarządzaniem dystrybucją podów i wygodniejszej pracy z kontnerami.",
-            "W tej prezentacji omówię wybrane przeze mnie najciekawsze funkcje, które mogą odmienić na zawsze sposób pracy i ją zdecydowanie ułatwić. To co do tej pory było trudne do osiągnięcia, jest teraz możliwe dzięki Kubernetes i kontenerom.",
-            "Sesja będzie zawierać też kilka pokazów demo, aby jeszcze bardziej unaocznić jak prosto zaimplementować te funkcje na klastrze."
-        ]
-    },
-    "Barczyński": {
-        "name": "Wojciech Barczyński",
-        "img": "images/speakers/wojciech.jpg",
-        "title": "VP of Engineering at Spacelift",
-        "ln": "https://www.linkedin.com/in/wojciechbarczynski/",
-        "tw": "https://twitter.com/wbarczynski",
-        "bio": [
-            "Leading the Engineering at Spacelift. At Spacelift, we build a sophisticated, compliant, and collaborative management platform for Infrastructure-as-a-Code (from Terraform/Terragrunt, AWS Cloudformations, K8S, to Pulumi)"
-        ],
-        "sessionTitle": "Najlepsze praktyki otworzenie zasobów chmurowych z użyciem infrastructure-as-a-code na przykładzie Terraforma",
-        "sessionDescription": [
-            "Infastructure-as-a-Code jest u podstawy każdej efektywnej organizacji budującej lub utrzymującej oprogramowanie na publicznej lub prywantnej chmurze.",
-            "Większość organizacji zaczyna od Terraforma uruchamianego z lokalnych maszyn, aby później zdecydować się na implementację automatyzacji, a następnie otworzyć IaC dla reszty organizacji.",
-            "W czasie mojej prezentacji omówię najlepsze praktyki w każdej z tych faz oraz narzędzi dla Terraforma, które pozwalają przesunąć-w-lewo takie aspekty jak bezpieczeństwo czy zarządzanie kosztami."
-        ]
-    },
-    "Kowalski": {
-        "name": "Mariusz Piotr Kowalski",
-        "img": "images/speakers/Mariusz-Piotr-Kowalski.jpg",
-        "title": "Solution Architect @ mBank",
-        "ln": "https://www.linkedin.com/in/mariusz-piotr-kowalski-33bba850/",
-        "tw": "",
-        "bio": [
-            "Spełniony Tata, fan Klocków LEGO, Tenisa oraz squash-a.",
-            "Wywodzę się z „twardej” infry (od zawsze Admin), obecnie Solution Architect/OPS/DevOPS.",
-            "Moja dewiza „Wybierz pracę, którą kochasz, i nie przepracujesz ani jednego dnia …😊”"
-        ],
-        "sessionTitle": "Budowa platformy orkiestracji kontenerów",
-        "sessionDescription": [
-            "Studium przypadku budowy platformy orkiestracji kontenerów:",
-            "➡️ Przedstawię nasze podejście do budowy platformy bazującej na waniliowym Kubernetesie. Zastosowane technologie. Pojęte trudne decyzje.",
-            "➡️ Budowa niezbędnego multifunkcyjnego zespołu.",
-            "➡️ Jesteśmy na Produkcji i co dalej? – Utrzymanie Platformy",
-            "➡️ Gdzie się widzimy z naszą platformę za „dwa lata\"."
-        ]
-    },
-    "Mrzygłód": {
-        "name": "Kamil Mrzygłód",
-        "img": "images/speakers/kamil.jpg",
-        "title": "Tech Lead @ Jit Team",
-        "ln": "https://www.linkedin.com/in/kamil-mrzyg%C5%82%C3%B3d-31470376/",
-        "tw": "https://twitter.com/kamil_mrzyglod",
-        "bio": [
-            "Tech lead, developer oraz trener skupiony głównie na .NET oraz Microsoft Azure. Od prawie 7 lat buduję rozwiązania oparte o technologie chmurowe wspierając firmy w obszarach nie tylko wytwarzania oprogramowania, ale także DevOps oraz FinOps. Koncentruję się na poprawnej automatyzacji wdrożeń – niezależnie od tego, czy mówimy o samym oprogramowaniu, czy też o współistniejącej infrastrukturze."
-        ],
-        "sessionTitle": "Zunifikowane środowisko w Kubernetes z użyciem Terraform",
-        "sessionDescription": [
-            "Terraform kojarzy się nam głównie z narzędziem do Infrastructure-as-Code. Okazuje się jednak, że całkiem sprawnie radzi sobie z elementami, które nie są typową infrastrukturą chmurową. W trakcie sensji sprawdzimy czy Terraforma można używać jako zunifikowanej platformy do zarządzania Kubernetes - zaczynając od wdrożenia samego klastra, po podstawowe obiekty, na wykorzystaniu Helma kończąc."
-        ]
-    },
-    "KGS": {
-        "name": "Łukasz Kałużny, Jakub Gutkowski, Piotr Stapp",
-        "img": "images/speakers/todo.jpg",
-        "title": "Masters of Containers",
-        "ln": "ToDo",
-        "tw": "ToDo",
-        "bio": [
-            "ToDo"
-        ],
-        "sessionTitle": "Live Q&A czyli tworzymy architekturę na żywo",
-        "sessionDescription": [
-            "Na żywo razem z Wami spróbujemy zaprojektować (i omówić!) system. Oczywiście raczej w wersji krytyki i analizy \"dobrych\" praktyk wytarzania małych i dużych systemów"
-        ]
-    },
-    "ToDo": {
-        "name": "ToDo",
-        "img": "images/speakers/todo.jpg",
-        "title": "ToDo",
-        "ln": "ToDo",
-        "tw": "ToDo",
-        "bio": [
-            "ToDo"
-        ],
-        "sessionTitle": "ToDo",
-        "sessionDescription": [
-            "ToDo"
-        ]
-    },
     "agenda": [
         {
             "name": "Łukasz Kałużny, Jakub Gutkowski, Piotr Stapp",
@@ -102,8 +6,8 @@
             "time": "09:00:00",
             "title": "Dzień dobry Architekturo",
             "url": "https://www.youtube.com/embed/PADjMJ9WJjw",
-            "urlWatch" : "https://www.youtube.com/watch?v=PADjMJ9WJjw",
-            "agendaTime" : "09:15&nbsp-&nbsp9:25"
+            "urlWatch": "https://www.youtube.com/watch?v=PADjMJ9WJjw",
+            "agendaTime": "09:15&nbsp-&nbsp9:25"
         },
         {
             "name": "Tomasz Cholewa",
@@ -111,44 +15,44 @@
             "time": "09:29:00",
             "title": "Zaskakujące funkcje Kubernetes, które musisz poznać",
             "url": "https://www.youtube.com/embed/6rScIHlkiR0",
-            "urlWatch" : "https://www.youtube.com/watch?v=6rScIHlkiR0",
-            "agendaTime" : "09:30&nbsp-&nbsp10:25"
+            "urlWatch": "https://www.youtube.com/watch?v=6rScIHlkiR0",
+            "agendaTime": "09:30&nbsp-&nbsp10:25"
         },
         {
             "name": "Mariusz Piotr Kowalski",
             "headline": "Solution Architect mBank",
             "time": "10:29:00",
             "title": "Budowa platformy orkiestracji kontenerów",
-            "url": "https://www.youtube.com/embed/flxBfvQ7FSE",
-            "urlWatch" : "https://www.youtube.com/watch?v=flxBfvQ7FSE",
-            "agendaTime" : "10:30&nbsp-&nbsp11:25"
+            "url": "https://www.youtube.com/embed/flxBfvQ7FSE&autoplay=1",
+            "urlWatch": "https://www.youtube.com/watch?v=flxBfvQ7FSE",
+            "agendaTime": "10:30&nbsp-&nbsp11:25"
         },
         {
-            "name" : "Kamil Mrzygłód",
-            "headline" : "Tech Lead @ Jit Team",
-            "time" : "11:29:00",
-            "title" : "Zunifikowane środowisko w Kubernetes z użyciem Terraform",
-            "url" : "https://www.youtube.com/embed/zWuShZ8_j30",
-            "urlWatch" : "https://www.youtube.com/watch?v=zWuShZ8_j30",
-            "agendaTime" : "11:30&nbsp-&nbsp12:25"
+            "name": "Kamil Mrzygłód",
+            "headline": "Tech Lead @ Jit Team",
+            "time": "11:28:00",
+            "title": "Zunifikowane środowisko w Kubernetes z użyciem Terraform",
+            "url": "https://www.youtube.com/embed/zWuShZ8_j30&autoplay=1",
+            "urlWatch": "https://www.youtube.com/watch?v=zWuShZ8_j30",
+            "agendaTime": "11:30&nbsp-&nbsp12:25"
         },
         {
-            "name" :"Wojciech Barczyński",
-            "headline" : "VP of Engineering at Spacelift",
-            "time" : "12:29:00",
-            "title" : "Najlepsze praktyki tworzenia zasobów chmurowych z użyciem infrastructure-as-a-code na przykładzie Terraforma",
-            "url" : "https://www.youtube.com/embed/HZZK8B-AJFo",
-            "urlWatch" : "https://www.youtube.com/watch?v=HZZK8B-AJFo",
-            "agendaTime" : "13:00&nbsp-&nbsp13:55"
+            "name": "Wojciech Barczyński",
+            "headline": "VP of Engineering at Spacelift",
+            "time": "12:28:00",
+            "title": "Najlepsze praktyki tworzenia zasobów chmurowych z użyciem infrastructure-as-a-code na przykładzie Terraforma",
+            "url": "https://www.youtube.com/embed/HZZK8B-AJFo&autoplay=1",
+            "urlWatch": "https://www.youtube.com/watch?v=HZZK8B-AJFo",
+            "agendaTime": "13:00&nbsp-&nbsp13:55"
         },
         {
-            "name" :"Łukasz Kałużny, Jakub Gutkowski, Piotr Stapp",
-            "headline" : "Masters of Containers",
-            "time" : "13:59:00",
-            "title" : "Popołudniowa Kawa - Q&A na temat architektury i systemów rozproszonych",
-            "url" : "https://www.youtube.com/embed/otcdpk63g2M",
-            "urlWatch" : "https://www.youtube.com/watch?v=otcdpk63g2M",
-            "agendaTime" : "14:00&nbsp-&nbsp14:55"
+            "name": "Łukasz Kałużny, Jakub Gutkowski, Piotr Stapp",
+            "headline": "Masters of Containers",
+            "time": "13:58:00",
+            "title": "Popołudniowa Kawa - Q&A na temat architektury i systemów rozproszonych",
+            "url": "https://www.youtube.com/embed/otcdpk63g2M&autoplay=1",
+            "urlWatch": "https://www.youtube.com/watch?v=otcdpk63g2M",
+            "agendaTime": "14:00&nbsp-&nbsp14:55"
         }
     ]
 }
