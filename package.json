@@ -9,6 +9,7 @@
     "browsersync": "browser-sync start --directory --server ./public --files ./public/* --startPath index.html --ignore ./public/watch-2022.json",
     "clean": "rimraf public/*",
     "copy-assets": "cpx \"src/assets/**/*.*\" public/",
+    "copy-redirects": "cpx \"src/assets/_redirects\" public/",
     "copy-html": "cpx \"src/html/*.html\" public/",
     "css-compile": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.css",
     "css-minified": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify",
