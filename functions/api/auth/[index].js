@@ -27,5 +27,5 @@ export async function onRequestGet(context) {
             return new Response(token);
         }
         return new Response(null, { status: 401 });
-    }
+    } else return new Response(null, { status: 401 });
 }
