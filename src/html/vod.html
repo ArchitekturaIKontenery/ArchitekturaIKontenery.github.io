@@ -197,38 +197,14 @@
 
     <!-- AGENDA -->
     <section class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null, editionId: '2022'}"
-      x-init="isLoading = true; edition = await getEdition(editionId); isLoading = false; ">
+      x-init="edition = await getEdition(editionId)">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -m-8">
-          <div class="absolute inset-0 flex justify-center items-center mx-auto p-8 z-10 " x-show="isLoading"
-            x-transition x-transition.opacity>
-            <svg class="w-12 h-12 animate-spin text-indigo-400" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4.75V6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-              </path>
-              <path d="M17.1266 6.87347L16.0659 7.93413" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path d="M19.25 12L17.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path d="M17.1266 17.1265L16.0659 16.0659" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path d="M12 17.75V19.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-              </path>
-              <path d="M7.9342 16.0659L6.87354 17.1265" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path d="M6.25 12L4.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path d="M7.9342 7.93413L6.87354 6.87347" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div class="w-full p-8" x-show="!isLoading" x-transition x-transition.scale.origin.top x-transition.opacity>
+          <div class="w-full p-8">
             <h2 class="font-heading font-semibold text-center text-6xl sm:text-7xl text-gray-900" x-text="edition.name">
             </h2>
           </div>
-          <div class="w-full p-8" x-show="!isLoading" x-transition x-transition.scale.origin.top x-transition.opacity>
+          <div class="w-full p-8">
             <div>
               <div class="h-0.5 bg-gradient-cyan"></div>
               <!-- row -->
