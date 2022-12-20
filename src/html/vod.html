@@ -82,11 +82,14 @@
     <img height="1" width="1" style="display:none;" alt=""
       src="https://px.ads.linkedin.com/collect/?pid=4957937&fmt=gif" />
   </noscript>
-  <script>
-  </script>
+  <style>
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
 </head>
 
-<body class="antialiased bg-body text-body font-body" x-data="{ isLoading: true }">
+<body class="antialiased bg-body text-body font-body" x-data="{ authorized: false }">
 
   <div class="">
     <!--Section HEADER-->
@@ -172,22 +175,24 @@
             <p class="hidden mb-9 font-medium text-lg text-center text-white">Velit officia consequat duis enim velit
               mollit.
               Exercitation veniam consequat</p>
-            <div class="flex flex-wrap justify-center items-center mb-7 -m-1.5">
-              <div class="w-full lg:w-96 p-1.5">
-                <input x-model="mail" x-ref="mail"
-                  class="text-gray-500 px-5 py-4 w-full placeholder-gray-500 outline-none focus:ring-4 focus:ring-indigo-400 rounded"
-                  type="text" placeholder="Podaj e-mail, żeby uzyskać dostęp">
+            <template x-if="!authorized" x-transition>
+              <div class="flex flex-wrap justify-center items-center mb-7 -m-1.5">
+                <div class="w-full lg:w-96 p-1.5">
+                  <input x-model="mail" x-ref="mail"
+                    class="text-gray-500 px-5 py-4 w-full placeholder-gray-500 outline-none focus:ring-4 focus:ring-indigo-400 rounded"
+                    type="text" placeholder="Podaj e-mail, żeby uzyskać dostęp">
+                </div>
+                <div class="w-full lg:w-auto p-1.5">
+                  <button x-on:click="(await auth(mail)) === true ? document.location.reload() : undefined;"
+                    class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
+                    <div
+                      class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
+                    </div>
+                    <p class="relative z-10">Obejrzyj materiały</p>
+                  </button>
+                </div>
               </div>
-              <div class="w-full lg:w-auto p-1.5">
-                <button x-on:click="await auth(mail);"
-                  class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
-                  <div
-                    class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
-                  </div>
-                  <p class="relative z-10">Obejrzyj materiały</p>
-                </button>
-              </div>
-            </div>
+            </template>
           </div>
         </div>
       </div>
@@ -196,8 +201,8 @@
     <!--Section HEADER-->
 
     <!-- AGENDA -->
-    <section class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null, editionId: '2022'}"
-      x-init="edition = await getEdition(editionId)">
+    <section x-cloak class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null, editionId: '2022'}"
+      x-init="edition = await getEdition(editionId); authorized = edition.authorized; ">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -m-8">
           <div class="w-full p-8">
