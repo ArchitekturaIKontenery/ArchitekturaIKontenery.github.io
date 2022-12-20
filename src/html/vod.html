@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css?v=20221220">
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,7 +16,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <script defer src="js/materials.js"></script>
+  <script defer src="js/vod.js"></script>
   <script src="https://kit.fontawesome.com/14fd7d664a.js" crossorigin="anonymous"></script>
 
 
@@ -263,7 +263,7 @@
                     </div>
                   </div>
                   <div class="flex flex-wrap items-center p-4 w-full" x-show="expanded" x-collapse>
-                    <template x-if="edition.authorized">
+                    <template x-if="edition.authorized" x-transition>
                       <div class="aspect-h-9 aspect-w-16 h-full w-full">
                         <iframe
                           x-bind:src="'https://player.vimeo.com/video/' + session.vimeoId + '?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'"
@@ -271,7 +271,7 @@
                           x-bind:title="session.sessionTitle"></iframe>
                       </div>
                     </template>
-                    <template x-if="!edition.authorized">
+                    <template x-if="!edition.authorized" x-transition>
                       <div class="flex flex-wrap justify-center items-center mb-7 -m-1.5 mx-auto" x-data="{ mail: '' }">
                         <div class="w-full lg:w-72 p-1.5">
                           <input x-model="mail" x-ref="mail"
