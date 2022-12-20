@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Architektura i kontenery 2022</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script defer src="js/materials.js"></script>
+  <script src="https://kit.fontawesome.com/14fd7d664a.js" crossorigin="anonymous"></script>
+
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-N84F3JM");
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1200620883313556');
+    fbq('init', '313040722397945');
+    fbq('init', '214496003024029');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1200620883313556&ev=PageView&noscript=1" />
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=313040722397945&ev=PageView&noscript=1" />
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=214496003024029&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+  <script type="text/javascript">
+    _linkedin_partner_id = "4957937";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function (l) {
+      if (!l) {
+        window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+        window.lintrk.q = []
+      }
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://px.ads.linkedin.com/collect/?pid=4957937&fmt=gif" />
+  </noscript>
+  <script>
+  </script>
+</head>
+
+<body class="antialiased bg-body text-body font-body" x-data="{ isLoading: true }">
+
+  <div class="">
+    <!--Section HEADER-->
+    <section class="relative overflow-hidden"
+      style="background: url(images/bg.webp) no-repeat; background-size: cover;">
+      <section>
+        <div class="flex items-center justify-between px-8 py-5">
+          <div class="w-auto">
+            <div class="flex flex-wrap items-center">
+              <div class="w-auto mr-14">
+                <img src="images/architektura_i_kontenery_darkmode.webp" alt="Architektura i kontenery">
+              </div>
+            </div>
+          </div>
+          <div class="w-auto hidden lg:block z-50">
+            <ul class="flex items-center mr-10">
+              <li class="font-heading mr-9 text-white hover:text-gray-200 text-lg"><a href="/">Architektura i
+                  kontenery</a></li>
+              <li class="font-heading mr-9 text-white hover:text-gray-200 text-lg"><a
+                  href="https://poznajdocker.pl/">Poznaj Docker</a></li>
+              <li class="font-heading mr-9 text-white hover:text-gray-200 text-lg"><a
+                  href="https://poznajkubernetes.pl/">Poznaj Kubernetes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-auto">
+            <div class="flex flex-wrap items-center">
+              <div class="w-auto lg:hidden">
+                <a href="#">
+                  <svg class="navbar-burger text-gray-800" width="51" height="51" viewbox="0 0 56 56" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="56" height="56" rx="28" fill="currentColor"></rect>
+                    <path d="M37 32H19M37 24H19" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
+          <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+          <nav class="relative z-10 px-9 py-8 bg-white h-full">
+            <div class="flex flex-wrap justify-between h-full">
+              <div class="w-full">
+                <div class="flex items-center justify-between -m-2">
+                  <div class="w-auto p-2">
+                    <img class="inline-block" src="images/architektura_i_kontenery.webp" alt="Architektura i kontenery">
+                  </div>
+                  <div class="w-auto p-2">
+                    <a class="navbar-burger" href="#">
+                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-center py-8 w-full">
+                <ul>
+                  <li class="mb-12"><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700"
+                      href="/">Architektura i
+                      kontenery</a></li>
+                  <li class="mb-12"><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700"
+                      href="https://poznajdocker.pl/">Poznaj Docker</a></li>
+                  <li class="mb-12"><a class="font-heading font-medium text-lg text-gray-900 hover:text-gray-700"
+                      href="https://poznajkubernetes.pl/">Poznaj Kubernetes</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <div class="relative z-10 container mx-auto px-4" x-data="{ mail: '' }">
+        <div class="flex flex-wrap justify-center items-center pt-32">
+          <div class="w-auto">
+            <h1 class="mb-4 font-heading text-center text-white text-8xl md:text-10xl font-bold">Architektura i
+              kontenery
+            </h1>
+            <h2 class="mb-4 font-heading text-center text-white text-6xl md:text-8xl font-bold">Poprzednie edycje
+            </h2>
+            <p class="hidden mb-9 font-medium text-lg text-center text-white">Velit officia consequat duis enim velit
+              mollit.
+              Exercitation veniam consequat</p>
+            <div class="flex flex-wrap justify-center items-center mb-7 -m-1.5">
+              <div class="w-full lg:w-96 p-1.5">
+                <input x-model="mail" x-ref="mail"
+                  class="text-gray-500 px-5 py-4 w-full placeholder-gray-500 outline-none focus:ring-4 focus:ring-indigo-400 rounded"
+                  type="text" placeholder="Podaj e-mail, żeby uzyskać dostęp">
+              </div>
+              <div class="w-full lg:w-auto p-1.5">
+                <button x-on:click="await auth(mail);"
+                  class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
+                  <div
+                    class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
+                  </div>
+                  <p class="relative z-10">Obejrzyj materiały</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="absolute bottom-0 left-0 w-full" src="gradia-assets/elements/hero/line.svg" alt="">
+    </section>
+    <!--Section HEADER-->
+
+    <!-- AGENDA -->
+    <section class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null, editionId: '2022'}"
+      x-init="isLoading = true; edition = await getEdition(editionId); isLoading = false; ">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -m-8">
+          <div class="absolute inset-0 flex justify-center items-center mx-auto p-8 z-10 " x-show="isLoading"
+            x-transition x-transition.opacity>
+            <svg class="w-12 h-12 animate-spin text-indigo-400" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4.75V6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+              </path>
+              <path d="M17.1266 6.87347L16.0659 7.93413" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M19.25 12L17.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M17.1266 17.1265L16.0659 16.0659" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M12 17.75V19.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+              </path>
+              <path d="M7.9342 16.0659L6.87354 17.1265" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M6.25 12L4.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M7.9342 7.93413L6.87354 6.87347" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="w-full p-8" x-show="!isLoading" x-transition x-transition.scale.origin.top x-transition.opacity>
+            <h2 class="font-heading font-semibold text-center text-6xl sm:text-7xl text-gray-900" x-text="edition.name">
+            </h2>
+          </div>
+          <div class="w-full p-8" x-show="!isLoading" x-transition x-transition.scale.origin.top x-transition.opacity>
+            <div>
+              <div class="h-0.5 bg-gradient-cyan"></div>
+              <!-- row -->
+              <template x-for="session in edition.sessions" :key="session.sessionTitle">
+                <div x-data="{ expanded: false }">
+                  <div class="flex flex-wrap items-center py-7 -m-2">
+                    <div class="p-2">
+                      <div class="flex flex-wrap items-center justify-between">
+                        <div class="w-auto p-2">
+                          <button
+                            class="group relative font-heading py-2 px-4 block w-full md:w-auto text-base text-white font-medium bg-gray-900 overflow-hidden rounded-lg"
+                            @click="expanded = ! expanded">
+                            <div
+                              class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full bg-gray-800 transition ease-in-out duration-500">
+                            </div>
+                            <p class="relative z-10">Obejrzyj</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full md:w-4/5 p-2">
+                      <div class="flex flex-wrap md:flex-nowrap">
+                        <div class="w-auto p-2">
+                          <h3 class="font-heading font-bold text-xl text-gray-900" x-text="session.sessionTitle"></h3>
+                          <p class="text-lg text-gray-900"><span x-text="session.name"></span> <a
+                              x-bind:href="session.ln" target="_blank"><i class="fa fa-linkedin"
+                                aria-hidden="true"></i></a> <a x-bind:href="session.tw" target="_blank"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap items-center p-4 w-full" x-show="expanded" x-collapse>
+                    <template x-if="edition.authorized">
+                      <div class="aspect-h-9 aspect-w-16 h-full w-full">
+                        <iframe
+                          x-bind:src="'https://player.vimeo.com/video/' + session.vimeoId + '?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'"
+                          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                          x-bind:title="session.sessionTitle"></iframe>
+                      </div>
+                    </template>
+                    <template x-if="!edition.authorized">
+                      <div class="flex flex-wrap justify-center items-center mb-7 -m-1.5 mx-auto" x-data="{ mail: '' }">
+                        <div class="w-full lg:w-72 p-1.5">
+                          <input x-model="mail" x-ref="mail"
+                            class="text-gray-500 px-5 py-4 w-full placeholder-gray-500 outline-none focus:ring-4 focus:ring-indigo-400 rounded ring-2 ring-black"
+                            type="text" placeholder="Podaj e-mail, żeby uzyskać dostęp">
+                        </div>
+                        <div class="w-full lg:w-auto p-1.5">
+                          <button
+                            x-on:click="edition = (await auth(mail)) === true ? await getEdition(editionId) : await getEdition(editionId);"
+                            class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
+                            <div
+                              class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
+                            </div>
+                            <p class="relative z-10">Obejrzyj materiały</p>
+                          </button>
+                        </div>
+                      </div>
+                    </template>
+                    <div class="w-full px-4 text-justify">
+                      <template x-for="description in session.sessionDescription" :key="description">
+                        <p class="text-lg text-gray-900" x-text="description"></p>
+                      </template>
+                    </div>
+                  </div>
+                  <div class="h-0.5 bg-gradient-cyan"></div>
+                </div>
+              </template>
+              <!-- row -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- AGENDA -->
+
+    <!-- CTA -->
+
+    <section class="relative overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="p-16 bg-gradient-cyan2 rounded-10"
+          style="background: url(gradia-assets/images/hero/bg.png) no-repeat; background-size: cover;">
+          <div class="flex flex-wrap items-center justify-between -m-6">
+            <div class="w-full md:w-3/4 p-6">
+              <div class="">
+                <p class="mb-5 font-heading font-medium text-xl text-gray-400">Szkolenia dostosowane do Twoich potrzeb
+                </p>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white">Poszukujesz szkoleń z zakresu DevOps
+                  (w tym: Docker/Kubernetes, Terraform czy teoria), architektury albo chmury? Napisz do nas!</h2>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4 p-6">
+              <div class="flex flex-wrap justify-end -m-2">
+                <div class="w-full xl:w-auto p-2">
+                  <button
+                    onclick="location.href='mailto:narwal@architekturaikontenery.pl?subject=Zapytanie%20o%20dedykowane%20szkolenie&body=Poszukujemy%20szkole%C5%84%20z%20zakresu%20DevOps%2FArchitektury%2FChmury%2C%20a%20dok%C5%82adniej%20Docker%2FKubernetes%2FTerraform%2FTeoria%2F%22CI%2FCD%22%2FAzure%2FAWS%2FCloud%20Native';"
+                    class="font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Kontakt</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="pt-24 overflow-hidden">
+      <div class="container mx-auto px-4">
+        <a href="/"><img class="mx-auto mb-16" src="images/architektura_i_kontenery.webp" alt=""></a>
+        <ul class="flex flex-wrap justify-center -m-5 pb-8">
+          <li class="p-5"><a class="font-heading text-base text-gray-900 hover:text-gray-700"
+              href="https://poznajkubernetes.pl/">Poznaj Kubernetes</a></li>
+          <li class="p-5"><a class="font-heading text-base text-gray-900 hover:text-gray-700"
+              href="https://poznajdocker.pl/">Poznaj Docker</a></li>
+          <li class="p-5"><a class="font-heading text-base text-gray-900 hover:text-gray-700"
+              href="/policy.html">Polityka Prywatności</a></li>
+        </ul>
+        <div class="border-b border-gray-100"></div>
+        <p class="text-gray-600 text-center py-8 text-sm">© Copyright 2022. Gutkowski-Stapp. Wszystkie prawa
+          zastrzeżone.</p>
+      </div>
+    </section>
+  </div>
+  <!-- MailerLite Universal -->
+  <script>
+    (function (m, a, i, l, e, r) {
+      m['MailerLiteObject'] = e; function f() {
+        var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
+      }
+      f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+      var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+      _.parentNode.insertBefore(r, _);
+    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+    var ml_account = ml('accounts', '1685044', 'p7i8i7p7f9', 'load');
+  </script>
+  <!-- End MailerLite Universal -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+
+</html>

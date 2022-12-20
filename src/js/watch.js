@@ -1,5 +1,9 @@
 import { ApplicationInsights } from '@microsoft/applicationinsights-web'
 import Alpine from 'alpinejs';
+import collapse from '@alpinejs/collapse'
+
+Alpine.plugin(collapse)
+
 
 const appInsights = new ApplicationInsights({
   config: {
