@@ -183,7 +183,7 @@
                     type="text" placeholder="Podaj e-mail, żeby uzyskać dostęp">
                 </div>
                 <div class="w-full lg:w-auto p-1.5">
-                  <button x-on:click="(await auth(mail)) === true ? document.location.reload() : undefined;"
+                  <button x-on:click="(await auth(mail.trim())) === true ? document.location.reload() : undefined;"
                     class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
                     <div
                       class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
@@ -261,7 +261,7 @@
                         </div>
                         <div class="w-full lg:w-auto p-1.5">
                           <button
-                            x-on:click="edition = (await auth(mail)) === true ? await getEdition(editionId) : await getEdition(editionId);"
+                            x-on:click="edition = (await auth(mail.trim())) === true ? await getEdition(editionId) : await getEdition(editionId);"
                             class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
                             <div
                               class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
