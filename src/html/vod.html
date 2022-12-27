@@ -89,7 +89,8 @@
   </style>
 </head>
 
-<body class="antialiased bg-body text-body font-body" x-data="{ authorized: false }">
+<body class="antialiased bg-body text-body font-body"
+  x-data="{ authorized: false, editionMain: '2022', editionIds: [ '2021'] }">
 
   <div class="">
     <!--Section HEADER-->
@@ -201,7 +202,7 @@
     <!--Section HEADER-->
 
     <!-- AGENDA -->
-    <section x-cloak class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null, editionId: '2022'}"
+    <section x-cloak class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null, editionId: editionMain}"
       x-init="edition = await getEdition(editionId); authorized = edition.authorized; ">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -m-8">
@@ -271,7 +272,7 @@
                         </div>
                       </div>
                     </template>
-                    <div class="w-full px-4 text-justify">
+                    <div class="w-full px-4 py-8 text-justify">
                       <template x-for="description in session.sessionDescription" :key="description">
                         <p class="text-lg text-gray-900" x-text="description"></p>
                       </template>
@@ -286,7 +287,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- AGENDA -->
 
@@ -320,6 +320,98 @@
     </section>
 
     <!-- CTA -->
+
+    <!-- AGENDA -->
+    <template x-for="editionId in editionIds" :key="editionId">
+      <section x-cloak class="py-10 overflow-hidden" id="agenda" x-data="{ edition: null }"
+        x-init="edition = await getEdition(editionId); authorized = edition.authorized; ">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -m-8">
+            <div class="w-full p-8">
+              <h2 class="font-heading font-semibold text-center text-6xl sm:text-7xl text-gray-900"
+                x-text="edition.name">
+              </h2>
+            </div>
+            <div class="w-full p-8">
+              <div>
+                <div class="h-0.5 bg-gradient-cyan"></div>
+                <!-- row -->
+                <template x-for="session in edition.sessions" :key="session.sessionTitle">
+                  <div x-data="{ expanded: false }">
+                    <div class="flex flex-wrap items-center py-7 -m-2">
+                      <div class="p-2">
+                        <div class="flex flex-wrap items-center justify-between">
+                          <div class="w-auto p-2">
+                            <button
+                              class="group relative font-heading py-2 px-4 block w-full md:w-auto text-base text-white font-medium bg-gray-900 overflow-hidden rounded-lg"
+                              @click="expanded = ! expanded">
+                              <div
+                                class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full bg-gray-800 transition ease-in-out duration-500">
+                              </div>
+                              <p class="relative z-10">Obejrzyj</p>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-full md:w-4/5 p-2">
+                        <div class="flex flex-wrap md:flex-nowrap">
+                          <div class="w-auto p-2">
+                            <h3 class="font-heading font-bold text-xl text-gray-900" x-text="session.sessionTitle"></h3>
+                            <p class="text-lg text-gray-900"><span x-text="session.name"></span> <a
+                                x-bind:href="session.ln" target="_blank"><i class="fa fa-linkedin"
+                                  aria-hidden="true"></i></a> <a x-bind:href="session.tw" target="_blank"><i
+                                  class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap items-center p-4 w-full" x-show="expanded" x-collapse>
+                      <template x-if="edition.authorized" x-transition>
+                        <div class="aspect-h-9 aspect-w-16 h-full w-full">
+                          <iframe
+                            x-bind:src="'https://player.vimeo.com/video/' + session.vimeoId + '?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            x-bind:title="session.sessionTitle"></iframe>
+                        </div>
+                      </template>
+                      <template x-if="!edition.authorized" x-transition>
+                        <div class="flex flex-wrap justify-center items-center mb-7 -m-1.5 mx-auto"
+                          x-data="{ mail: '' }">
+                          <div class="w-full lg:w-72 p-1.5">
+                            <input x-model="mail" x-ref="mail"
+                              class="text-gray-500 px-5 py-4 w-full placeholder-gray-500 outline-none focus:ring-4 focus:ring-indigo-400 rounded ring-2 ring-black appearance-none"
+                              type="text" placeholder="Podaj e-mail, żeby uzyskać dostęp">
+                          </div>
+                          <div class="w-full lg:w-auto p-1.5">
+                            <button
+                              x-on:click="edition = (await auth(mail.trim())) === true ? await getEdition(editionId) : await getEdition(editionId);"
+                              class="group relative font-heading px-6 py-5 w-full lg:w-auto uppercase text-white text-xs font-semibold tracking-px bg-gray-900 hover:bg-gray-800 overflow-hidden rounded-md">
+                              <div
+                                class="absolute top-0 left-0 transform -translate-x-full group-hover:-translate-x-0 h-full w-full transition ease-in-out duration-500 bg-gradient-indigo">
+                              </div>
+                              <p class="relative z-10">Zaloguj się</p>
+                            </button>
+                          </div>
+                        </div>
+                      </template>
+                      <div class="w-full px-4 py-8 text-justify">
+                        <template x-for="description in session.sessionDescription" :key="description">
+                          <p class="text-lg text-gray-900" x-text="description"></p>
+                        </template>
+                      </div>
+                    </div>
+                    <div class="h-0.5 bg-gradient-cyan"></div>
+                  </div>
+                </template>
+                <!-- row -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    <!-- AGENDA -->
 
     <section class="pt-24 overflow-hidden">
       <div class="container mx-auto px-4">
