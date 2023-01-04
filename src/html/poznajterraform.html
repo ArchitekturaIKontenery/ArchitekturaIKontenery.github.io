@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Poznaj Terraform</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css?v=202212201">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/14fd7d664a.js" crossorigin="anonymous"></script>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-N84F3JM");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1200620883313556');
+        fbq('init', '313040722397945');
+        fbq('init', '214496003024029');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1200620883313556&ev=PageView&noscript=1" />
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=313040722397945&ev=PageView&noscript=1" />
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=214496003024029&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "4957937";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function (l) {
+            if (!l) {
+                window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+                window.lintrk.q = []
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=4957937&fmt=gif" />
+    </noscript>
+
+</head>
+
+<body class="antialiased bg-body text-body font-body">
+
+    <div class="">
+        <!--Section HEADER-->
+        <section class="relative overflow-hidden bg-gradient-cyan2">
+            <!--style="background: url(/images/bg.webp) no-repeat; background-size: cover;" -->
+            <section>
+                <div class="flex items-center justify-between px-8 py-5">
+                    <div class="w-auto">
+                        <div class="flex flex-wrap items-center">
+                            <div class="w-auto mr-14">
+                                <img src="/images/architektura_i_kontenery.webp" alt="Architektura i kontenery">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="relative z-10 container mx-auto px-4" x-data="{ mail: '' }">
+                <div class="flex flex-wrap justify-center items-center pt-2">
+                    <div class="w-auto">
+                        <h1 class="mb-4 font-heading text-center text-gray-900 text-8xl md:text-10xl font-bold">
+                            Poznaj Terraform
+                        </h1>
+                        <p class="mb-9 font-medium text-lg text-center text-gray-900 text-opacity-60">Terraform jest
+                            uważany za jedno z
+                            najlepszych narzędzi do IaC. Poznaj go razem z nami!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img class="absolute bottom-0 left-0 w-full" src="/gradia-assets/elements/hero/line.svg" alt="">
+        </section>
+        <!--Section HEADER-->
+
+        <!-- CTA -->
+
+        <section class="relative py-18 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="p-16 bg-gradient-cyan2 rounded-10">
+                    <div class="flex flex-wrap items-center justify-between -m-6">
+                        <div class="w-full md:w-1/2 p-6">
+                            <div class="md:max-w-md">
+                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Poznaj
+                                    Terraform startuje już niedługo</p>
+                                <h2 class="font-heading font-bold text-5xl sm:text-6xl text-gray-900">Chcesz dowiedzieć
+                                    się więcej o Terraform?</h2>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 p-6">
+                            <div class="flex flex-wrap justify-end -m-2">
+                                <div class="w-full xl:w-auto p-2">
+                                    <button onclick="ml_account('webforms', '5846035', 'k3y0y8', 'show')"
+                                        class="font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Dołącz
+                                        do nas!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+
+        <section class="relative pt-0 pb-0 overflow-hidden">
+            <div class="container mx-auto px-4 mb-12">
+                <h2 class="mb-24 font-heading font-semibold text-center text-5xl sm:text-6xl text-gray-900">Dlaczego
+                    Terraform?</h2>
+                <div class="flex flex-wrap -m-8 max-w-4xl mx-auto">
+                    <div class="w-full md:w-1/2 p-8 border-b md:border-r border-gray-200">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/users.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <h3 class="mb-5 font-heading font-bold text-gray-900 text-lg group-hover:underline">
+                                    Wsparcie dla wielu dostawców chmury i on-prem</h3>
+                                <p class="mb-5 text-gray-600 text-base">Terraform obsługuje ponad 100 dostawców chmury,
+                                    w tym największe platformy, takie jak AWS, Azure, GCP oraz rozwiązania on-prem
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8 border-b border-gray-200">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/folder.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <h3 class="mb-5 font-heading font-bold text-gray-900 text-lg group-hover:underline">
+                                    Możliwość wizualizacji i planowania zmian</h3>
+                                <p class="mb-5 text-gray-600 text-base">Terraform umożliwia tworzenie "planów" zmian,
+                                    które pozwalają zobaczyć, jakie zmiany zostaną wprowadzone w infrastrukturze, zanim
+                                    zostaną one (błędnie 😉) wdrożone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/folder.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <h3 class="mb-5 font-heading font-bold text-gray-900 text-lg group-hover:underline">
+                                    Pluginy i społeczność</h3>
+                                <p class="mb-5 text-gray-600 text-base">Dzięki wsparciu firmy HashiCorp i dużej
+                                    społeczności istnieje wiele modułów i narzędzi, które można wykorzystać z Terraform,
+                                    co pozwala zwiększyć jego funkcjonalność i automatyzację.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/folder.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <h3 class="mb-5 font-heading font-bold text-gray-900 text-lg group-hover:underline">
+                                    Udostępnianie i współdzielenie konfiguracji</h3>
+                                <p class="mb-5 text-gray-600 text-base">TF (Terraform) to idealny przykład narzędzia
+                                    Infrastructure as a Code (IaC), czyli całość konfiguracji infrastruktury zapisywana
+                                    jest w formie kodu. Umożliwia to łatwe jej udostępnianie i współdzielenie z innymi
+                                    osobami.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Team-->
+        <section class="relative pt-24 pb-36 bg-gradient-cyan2 overflow-hidden">
+            <div class="relative z-10 container mx-auto px-4">
+                <div class="max-w-xl">
+                    <h2 class="mb-6 font-heading font-bold text-6xl sm:text-7xl text-gray-900">Kto za tym stoi?</h2>
+                    <p class="mb-20 text-lg text-gray-900 text-opacity-60 hidden">Amet minim mollit non deserunt ullamco
+                        est
+                        sit aliqua dolor
+                        do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>
+                <div class="flex flex-wrap -m-3">
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <div
+                            class="p-10 text-center transform hover:-translate-y-3 bg-white transition ease-out duration-1000 h-full">
+                            <img class="mb-7 mx-auto rounded-full w-32" src="/images/ptf/kamil.jpg" alt="">
+                            <h3 class="mb-1 font-bold text-gray-900 text-xl">Kamil Mrzygłód</h3>
+                            <p class="pb-8 text-sm text-gray-500 border-b border-gray-200">Główny prowadzący Poznaj
+                                Terraform</p>
+                            <p class="inline-block pt-8 font-heading text-sm text-left text-gray-900">Programista,
+                                konsultant oraz trener z wieloletnim doświadczeniem. Specjalista od chmurowego
+                                Infrastructure-as-Code - współpracował z wieloma firmami przygotowując dedykowane
+                                moduły, repozytoria oraz szablony Terraform. Skupia się na wsparciu organizacji w
+                                budowie ekosystemów do automatyzacji infrastruktury wspierających procesy wytwarzania
+                                oprogramowania. Prowadzi także dedykowane szkolenia związane z Terraform na każdym
+                                poziomie zaawansowania.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-2/3 p-3 grow-0">
+                        <div
+                            class="p-10 text-center transform hover:-translate-y-3 bg-white transition ease-out duration-1000 h-full">
+                            <h3 class="mb-1 pb-8 font-bold text-gray-900 text-xl border-b border-gray-200">Publikacje i
+                                projekty Kamila</h3>
+                            <ul class="inline-block list-inside pt-8 text-sm text-left text-gray-900 list-disc">
+                                <li><a href="https://www.amazon.com/Azure-Developers-ecosystems-containers-serverless/dp/1803240091/"
+                                        class="underline">Azure for Developers: Implement rich Azure PaaS ecosystems
+                                        using containers,
+                                        serverless services, and storage solutions, 2nd Edition</a></li>
+                                <li><a href="https://www.amazon.com/Azure-Administration-Cookbook-effectively-administer-ebook/dp/B07TZGNSQ9/"
+                                        class="underline">Learn Azure Administration: Solve your cloud administration
+                                        issues relating to
+                                        networking, storage, and identity management speedily and efficiently</a></li>
+                                <li><a href="https://www.amazon.com/Hands-Azure-Developers-ecosystems-containers/dp/1789340624/"
+                                        class="underline">Hands-On Azure for Developers: Implement rich Azure PaaS
+                                        ecosystems using
+                                        containers, serverless services, and storage solutions</a></li>
+                                <li><a href="https://github.com/TheCloudTheory/arm-estimator"
+                                        class="underline">Automated cost estimation of your Azure infrastructure made
+                                        easy. Works with ARM
+                                        Templates and Bicep</a></li>
+                            </ul>
+                            <div class="flex flex-wrap justify-items-center max-h-fit">
+                                <div class="w-full md:w-1/2 xl:w-1/3 p-3"><img class="object-scale-down mx-auto xl:h-56"
+                                        src="/images/ptf/book1.webp"></div>
+                                <div class="w-full md:w-1/2 xl:w-1/3 p-3"><img class="object-scale-down mx-auto xl:h-56"
+                                        src="/images/ptf/book2.webp"></div>
+                                <div class="w-full md:w-1/2 xl:w-1/3 p-3"><img class="object-scale-down mx-auto xl:h-56"
+                                        src="/images/ptf/book3.webp"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <div
+                            class="p-10 text-center transform hover:-translate-y-3 bg-white transition ease-out duration-1000 h-full">
+                            <img class="mb-7 mx-auto rounded-full w-32" src="/images/organizers/gutek.jpg" alt="">
+                            <h3 class="mb-1 font-bold text-gray-900 text-xl">Jakub Gutkowski</h3>
+                            <p class="pb-8 text-sm text-gray-500 border-b border-gray-200">Nadzór jakościowy
+                            </p>
+                            <p class="inline-block pt-8 font-heading text-sm text-left text-gray-900">
+                                Tata, mąż, blogger, programista, podcaster i pasjonat. Założyciel i jeden z
+                                organizatorów devWarsztatów.
+                                Z Kubernetes związany zawodowo i prywatnie. Uwielbia bawić się nowościami, poznawać nowe
+                                języki i biblioteki, chodzić na konferencje, poznawać nowych ludzi, pomagać innym.
+                                Microsoft MVP w kategorii Developer Technologies.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <div
+                            class="p-10 text-center transform hover:-translate-y-3 bg-white transition ease-out duration-1000 h-full">
+                            <img class="mb-7 mx-auto rounded-full w-32" src="/images/organizers/stapp.jpg" alt="">
+                            <h3 class="mb-1 font-bold text-gray-900 text-xl">Piotr Stapp
+                            </h3>
+                            <p class="pb-8 text-sm text-gray-500 border-b border-gray-200">Nadzór wydawniczy
+                            </p>
+                            <p class="inline-block pt-8 font-heading text-sm text-left text-gray-900">Programista,
+                                inżynier, rzemieślnik, projektant oraz ojciec bliźniaków.
+                                Wierzy w ludzi, a nie w papiery - jest wyznawcą DevOps i wszelkiej automatyzacji.
+                                Od czerwca 2018 znany jako "główny" dotnetomaniak.
+                                Z Kubernetes korzysta na co dzień w pracy i w domu (nie pytaj po co).
+                                Microsoft MVP w kategorii Developer Technologies.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3 ">
+                        <div
+                            class="p-10 text-center transform hover:-translate-y-3 bg-white transition ease-out duration-1000 h-full">
+                            <img class="mb-7 mx-auto rounded-full w-32" src="/images/organizers/lukasz.jpg" alt="">
+                            <h3 class="mb-1 font-bold text-gray-900 text-xl">Łukasz Kałużny</h3>
+                            <p class="pb-8 text-sm text-gray-500 border-b border-gray-200">Nadzór merytoryczny
+                            </p>
+                            <p class="inline-block pt-8 font-heading text-sm text-left text-gray-900">Inżynier,
+                                architekt, technology leader, konsultant, geek i ojciec dwójki maluchów.
+                                Pasjonat chmury publicznej oraz szeroko pojętej nowoczesnej architektury w IT oraz
+                                hipsterskich technologii, które dopiero się pojawiają.
+                                Z Kubernetes i kontenerami związany od dawna (pierwszy raz publicznie nakłaniał do nauki
+                                tego już w 2014 roku!).
+                                Microsoft MVP w kategorii Microsoft Azure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Team-->
+
+        <!-- Opinie o PK -->
+        <section class="pt-18 pb-20 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="mb-20 font-heading font-semibold text-6xl sm:text-7xl text-gray-900 text-center">Opinie o
+                    innych naszych programach</h2>
+                <iframe id="326008e8ce5748e3ad1518baaae09bfe" width="100%"
+                    src="https://app.easy.tools/walls/326008e8ce5748e3ad1518baaae09bfe"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    frameborder="0" scrolling="no"></iframe>
+                <script> window.addEventListener("message", (e) => { !!e.data.frameHeight && e.data.wallUuid === "326008e8ce5748e3ad1518baaae09bfe" && (document.getElementById("326008e8ce5748e3ad1518baaae09bfe").style.height = e.data.frameHeight); });</script>
+            </div>
+        </section>
+        <!-- Opinie o PK -->
+
+        <!-- CTA -->
+
+        <section class="relative py-18 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="p-16 bg-gradient-cyan2 rounded-10">
+                    <div class="flex flex-wrap items-center justify-between -m-6">
+                        <div class="w-full md:w-1/2 p-6">
+                            <div class="md:max-w-md">
+                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Poznaj
+                                    Terraform startuje już niedługo</p>
+                                <h2 class="font-heading font-bold text-5xl sm:text-6xl text-gray-900">Chcesz dowiedzieć
+                                    się więcej o Terraform?</h2>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 p-6">
+                            <div class="flex flex-wrap justify-end -m-2">
+                                <div class="w-full xl:w-auto p-2">
+                                    <button onclick="ml_account('webforms', '5846035', 'k3y0y8', 'show')"
+                                        class="font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Dołącz
+                                        do nas!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+
+        <section class="pt-24 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <a href="/"><img class="mx-auto mb-16" src="/images/architektura_i_kontenery.webp" alt=""></a>
+                <ul class="flex flex-wrap justify-center -m-5 pb-8">
+                    <li class="p-5"><a class="font-heading text-base text-gray-900 hover:text-gray-700"
+                            href="https://poznajkubernetes.pl/">Poznaj Kubernetes</a></li>
+                    <li class="p-5"><a class="font-heading text-base text-gray-900 hover:text-gray-700"
+                            href="https://poznajdocker.pl/">Poznaj Docker</a></li>
+                    <li class="p-5"><a class="font-heading text-base text-gray-900 hover:text-gray-700"
+                            href="/policy.html">Polityka Prywatności</a></li>
+                </ul>
+                <div class="border-b border-gray-100"></div>
+                <p class="text-gray-600 text-center py-8 text-sm">© Copyright 2022. Gutkowski-Stapp. Wszystkie prawa
+                    zastrzeżone.</p>
+            </div>
+        </section>
+    </div>
+    <!-- MailerLite Universal -->
+    <script>
+        (function (m, a, i, l, e, r) {
+            m['MailerLiteObject'] = e; function f() {
+                var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
+            }
+            f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+            var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+            _.parentNode.insertBefore(r, _);
+        })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+        var ml_account = ml('accounts', '1685044', 'p7i8i7p7f9', 'load');
+    </script>
+    <!-- End MailerLite Universal -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+
+</html>
