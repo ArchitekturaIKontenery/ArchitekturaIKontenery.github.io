@@ -127,8 +127,8 @@
                 <div
                     class="p-0.5 mb-7 border max-w-lg mx-auto bg-gradient-cyan focus-within:ring focus-within:ring-indigo-400 overflow-hidden rounded-xl">
                     <div class="p-0.5 bg-white overflow-hidden rounded-lg">
-                        <button onclick="ml_account('webforms', '5898806', 'r7w2t8', 'show')"
-                            class="group relative font-heading font-semibold w-full py-5 px-8 text-xs text-white bg-gray-900 hover:bg-gray-800 uppercase overflow-hidden rounded-md tracking-px">
+                        <button onclick="ml('show', 'ruDDtm', true)"
+                            class="ml-onclick-form group relative font-heading font-semibold w-full py-5 px-8 text-xs text-white bg-gray-900 hover:bg-gray-800 uppercase overflow-hidden rounded-md tracking-px">
                             <div
                                 class="absolute top-0 left-0 transform -translate-y-full group-hover:-translate-y-0 h-full w-full transition ease-in-out duration-500 bg-gradient-cyan">
                             </div>
@@ -502,16 +502,15 @@
     </div>
     <!-- MailerLite Universal -->
     <script>
-        (function (m, a, i, l, e, r) {
-            m['MailerLiteObject'] = e; function f() {
-                var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
-            }
-            f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
-            var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
-            _.parentNode.insertBefore(r, _);
-        })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-        var ml_account = ml('accounts', '1685044', 'p7i8i7p7f9', 'load');
+        (function (w, d, e, u, f, l, n) {
+            w[f] = w[f] || function () {
+                (w[f].q = w[f].q || [])
+                .push(arguments);
+            }, l = d.createElement(e), l.async = 1, l.src = u,
+            n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
+        })
+            (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+        ml('account', '230352');
     </script>
     <!-- End MailerLite Universal -->
     <script src="https://player.vimeo.com/api/player.js"></script>
