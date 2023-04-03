@@ -262,8 +262,8 @@ title: Architektura i kontenery 2022
               kontenery</h1>
             <div class="flex flex-wrap -m-3 mb-20">
               <div class="w-full lg:w-auto p-3">
-                <button onclick="ml_account('webforms', '5835194', 'c4f1h6', 'show')"
-                  class="font-heading w-full px-6 py-4 text-base text-gray-900 bg-white hover:bg-gray-100 rounded-md"><b>Chcę
+                <button onclick="ml('show', 'ggTDYc', true)"
+                  class="ml-onclick-form font-heading w-full px-6 py-4 text-base text-gray-900 bg-white hover:bg-gray-100 rounded-md"><b>Chcę
                     materiały!</b></button>
               </div>
               <div class="w-full lg:w-auto p-3">
@@ -966,9 +966,9 @@ title: Architektura i kontenery 2022
     (function (w, d, e, u, f, l, n) {
       w[f] = w[f] || function () {
         (w[f].q = w[f].q || [])
-        .push(arguments);
+          .push(arguments);
       }, l = d.createElement(e), l.async = 1, l.src = u,
-      n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
+        n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
     })
       (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
     ml('account', '230352');
