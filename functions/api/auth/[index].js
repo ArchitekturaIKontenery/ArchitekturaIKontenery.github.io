@@ -10,10 +10,10 @@ export async function onRequestGet(context) {
     if (!validateEmail(key)) {
         return new Response(null, { status: 401 });
     }
-    const response = await fetch(`https://api.mailerlite.com/api/v2/subscribers/${key}`, {
+    const response = await fetch(`https://connect.mailerlite.com/api/subscribers/${key}`, {
         headers: {
             Accept: "application/json",
-            "X-Mailerlite-Apikey": context.env.MAILERLITE_APIKEY
+            Authorization: "Bearer " + context.env.MAILERLITE_APIKEY
         }
     });
     if (response.ok) {
