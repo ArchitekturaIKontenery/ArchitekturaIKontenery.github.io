@@ -17,6 +17,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script src="https://kit.fontawesome.com/14fd7d664a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <meta property="og:image" content="https://architekturaikontenery.pl/images/ptf/og-image-ptf-v1.jpg" />
 
     <!-- Google Tag Manager -->
@@ -82,7 +83,47 @@
         <img height="1" width="1" style="display:none;" alt=""
             src="https://px.ads.linkedin.com/collect/?pid=4957937&fmt=gif" />
     </noscript>
-
+    <script>
+        function beer() {
+            return {
+                seconds: '00',
+                minutes: '00',
+                hours: '00',
+                days: '00',
+                distance: 0,
+                countdown: null,
+                beerTime: new Date('April 19, 2023 22:00:00').getTime(),
+                now: new Date().getTime(),
+                start: function () {
+                    this.countdown = setInterval(() => {
+                        // Calculate time
+                        this.now = new Date().getTime();
+                        this.distance = this.beerTime - this.now;
+                        // Set Times
+                        this.days = this.padNum(Math.floor(this.distance / (1000 * 60 * 60 * 24)));
+                        this.hours = this.padNum(Math.floor((this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+                        this.minutes = this.padNum(Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60)));
+                        this.seconds = this.padNum(Math.floor((this.distance % (1000 * 60)) / 1000));
+                        // Stop
+                        if (this.distance < 0) {
+                            clearInterval(this.countdown);
+                            this.days = '00';
+                            this.hours = '00';
+                            this.minutes = '00';
+                            this.seconds = '00';
+                        }
+                    }, 100);
+                },
+                padNum: function (num) {
+                    var zero = '';
+                    for (var i = 0; i < 2; i++) {
+                        zero += '0';
+                    }
+                    return (zero + num).slice(-2);
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="antialiased bg-body text-body font-body">
@@ -112,6 +153,32 @@
                             uważany za jedno z
                             najlepszych narzędzi do IaC. Poznaj go razem z nami!
                         </p>
+                        <h2 class="mb-4 font-heading text-center text-gray-700 text-6xl md:text-8xl font-bold">
+                            Dołącz do Poznaj Terraform w przedsprzedaży
+                        </h2>
+                        <p class="mb-4 font-medium text-lg text-center text-gray-900 text-opacity-60">Program ruszą
+                            najpoźniej
+                            w czerwcu 2023.
+                        </p>
+                        <div class="text-6xl text-center flex w-full items-center justify-center mb-9" x-data="beer()"
+                            x-init="start()">
+                            <div class="w-24 mx-1 p-2 bg-white text-gray-700 rounded-lg">
+                                <div class="font-mono leading-none" x-text="days">00</div>
+                                <div class="font-mono uppercase text-sm leading-none">Dni</div>
+                            </div>
+                            <div class="w-24 mx-1 p-2 bg-white text-gray-700 rounded-lg">
+                                <div class="font-mono leading-none" x-text="hours">00</div>
+                                <div class="font-mono uppercase text-sm leading-none">Godzin</div>
+                            </div>
+                            <div class="w-24 mx-1 p-2 bg-white text-gray-700 rounded-lg">
+                                <div class="font-mono leading-none" x-text="minutes">00</div>
+                                <div class="font-mono uppercase text-sm leading-none">Minut</div>
+                            </div>
+                            <div class="w-24 mx-1 p-2 bg-white text-gray-700 rounded-lg">
+                                <div class="font-mono leading-none" x-text="seconds">00</div>
+                                <div class="font-mono uppercase text-sm leading-none">Sekund</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,20 +192,22 @@
             <div class="container mx-auto px-4">
                 <div class="p-16 bg-gradient-cyan2 rounded-10">
                     <div class="flex flex-wrap items-center justify-between -m-6">
-                        <div class="w-full md:w-1/2 p-6">
-                            <div class="md:max-w-md">
-                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Poznaj
-                                    Terraform startuje już niedługo</p>
+                        <div class="w-full md:w-2/3 p-6">
+                            <div class="">
+                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Dołącz do
+                                    Poznaj Terraform w przedsprzedaży
+                                </p>
                                 <h2 class="font-heading font-bold text-5xl sm:text-6xl text-gray-900">Chcesz dowiedzieć
-                                    się więcej o Terraform?</h2>
+                                    się więcej o Terraform? Dołącz do innych chętnych wiedzy!</h2>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/2 p-6">
+                        <div class="w-full md:w-1/3 p-6">
                             <div class="flex flex-wrap justify-end -m-2">
                                 <div class="w-full xl:w-auto p-2">
-                                    <button onclick="ml_account('webforms', '5846035', 'k3y0y8', 'show')"
+                                    <button
+                                        onclick="location.href='https://dolacz.architekturaikontenery.pl/cart/add_product/poznaj-terraform-przedsprzedaz';"
                                         class="font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Dołącz
-                                        do nas!</button>
+                                        już teraz!</button>
                                 </div>
                             </div>
                         </div>
@@ -216,6 +285,244 @@
                 </div>
             </div>
         </section>
+
+        <section class="relative pt-0 pb-0 overflow-hidden">
+            <div class="container mx-auto px-4 mb-12">
+                <h2 class="mb-9 font-heading font-semibold text-center text-5xl sm:text-6xl text-gray-900">Co jest w
+                    pakiecie?</h2>
+                <p class="mb-9 mx-auto text-center font-heading font-bold text-gray-900 text-lg">Program "Poznaj
+                    Terraform" to 8 tygodni intensywnej wiedzy poznania najbardziej
+                    popularnego narzędzia Infrastracture as Code czyli Terraform.</p>
+                <div class="flex flex-wrap -m-8 max-w-4xl mx-auto">
+                    <div class="w-full md:w-1/2 p-8 border-b md:border-r border-gray-200">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/users.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <p class="mb-5 text-gray-600 text-base">
+                                    dostęp do programu od pierwszego dnia (prawdopodobna data wypuszczenia pierwszego
+                                    modułu to koniec maja)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8 border-b border-gray-200">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/folder.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <p class="mb-5 text-gray-600 text-base">
+                                    dostęp do zamkniętej grupy Slack, na której omawiane będą kwestie związane z
+                                    programem oraz z "pracami domowymi"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/folder.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <p class="mb-5 text-gray-600 text-base">
+                                    możliwość chat z instruktorem czyli Kamilem Mrzygłódem w przypadku problemów lub
+                                    chęci pogłębienia wiedzy
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-8">
+                        <div class="flex flex-wrap -m-4">
+                            <div class="w-auto p-4">
+                                <img src="/gradia-assets/elements/features/folder.svg" alt="">
+                            </div>
+                            <div class="flex-1 p-4">
+                                <p class="mb-5 text-gray-600 text-base">
+                                    prawo do zwrotu produktu do czasu publikacji 4 modułu bez podana przyczyny.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-24 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="mb-24 font-heading font-semibold text-center text-5xl sm:text-6xl text-gray-900">
+                    Agenda
+                </h2>
+                <div class="flex flex-wrap -m-3 mb-12">
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 1 - Podstawy
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Instalacja oraz konfiguracja uwierzytelnienia w Terraform</li>
+                                    <li>Tworzenie planu wdrożenia</li>
+                                    <li>Aplikacja zmian w infrastrukturze</li>
+                                    <li>Zmienne w Terraform</li>
+                                    <li>Zwracanie informacji o infrastrukturze</li>
+                                    <li>Workspaces</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 2 - HCL
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Definiowanie lokalnych zmiennych</li>
+                                    <li>Zabezpieczanie zmiennych</li>
+                                    <li>Pętle</li>
+                                    <li>Funkcje</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 3 - Resources
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Jak działają providerzy - przykłady dla dostawców chmurowych, on-premises i nie
+                                        tylko</li>
+                                    <li>Definiowanie zasobów w Terraform</li>
+                                    <li>Tworzenie zależności</li>
+                                    <li>Data sources</li>
+                                    <li>Resource drift</li>
+                                    <li>Lifecycle</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 4 - Moduły
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Wprowadzenie do modułów</li>
+                                    <li>Tworzenie lokalnego modułu</li>
+                                    <li>Tworzenie rejestru z modułami</li>
+                                    <li>Tworzenie modułu - dobre praktyki</li>
+                                    <li>Ekstrakcja fragmentów kodu infrastruktury do modułów</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 5 - Operations
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Blokowanie oraz aktualizacja wersji providera</li>
+                                    <li>Operacje na pliku stanu</li>
+                                    <li>Importowanie konfiguracji Terraform</li>
+                                    <li>Synchronizacja stanu z użyciem refresh-only</li>
+                                    <li>Refaktorowanie kodu infrastruktury</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 6 - Zaawansowany HCL
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Dynamic operations</li>
+                                    <li>Dynamic expressions</li>
+                                    <li>Custom conditions</li>
+                                    <li>Object attributes</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 7 - Terraform Cloud
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Workspaces</li>
+                                    <li>Uruchamianie wdrożenia w Terraform Cloud</li>
+                                    <li>Użytkownicy, zespoły oraz organizacje</li>
+                                    <li>Private Registry</li>
+                                    <li>Dodatkowe funkcjonalności - polityki oraz estymacja kosztów</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                        <a class="block h-full p-6 border border-gray-200 hover:border-gray-300 rounded-md" href="#">
+                            <p class="mb-7 font-heading font-semibold text-xs text-gray-500 uppercase tracking-px">
+                                👉 Tydzień 8 - Narzędzia dodatkowe oraz integracje
+                            </p>
+                            <h3 class="mb-1.5 font-heading font-semibold text-base text-gray-900">
+                                <ul>
+                                    <li>Testowanie z użyciem Terratest</li>
+                                    <li>Zarządzanie środowiskami z użyciem Terragrunt</li>
+                                    <li>Estymacja kosztów infrastruktury z Infracost</li>
+                                    <li>Przykłady CICD z użyciem Terraform oraz GitHub Actions</li>
+                                </ul>
+                            </h3>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+
+        <section class="relative py-18 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="p-16 bg-gradient-cyan2 rounded-10">
+                    <div class="flex flex-wrap items-center justify-between -m-6">
+                        <div class="w-full md:w-2/3 p-6">
+                            <div class="">
+                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Dołącz do
+                                    Poznaj Terraform w przedsprzedaży
+                                </p>
+                                <h2 class="font-heading font-bold text-5xl sm:text-6xl text-gray-900">Chcesz dowiedzieć
+                                    się więcej o Terraform? Dołącz do innych chętnych wiedzy!</h2>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/3 p-6">
+                            <div class="flex flex-wrap justify-end -m-2">
+                                <div class="w-full xl:w-auto p-2">
+                                    <button
+                                        onclick="location.href='https://dolacz.architekturaikontenery.pl/cart/add_product/poznaj-terraform-przedsprzedaz';"
+                                        class="font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Dołącz
+                                        już teraz!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
 
         <!--Team-->
         <section class="relative pt-24 pb-36 bg-gradient-cyan2 overflow-hidden">
@@ -441,20 +748,22 @@
             <div class="container mx-auto px-4">
                 <div class="p-16 bg-gradient-cyan2 rounded-10">
                     <div class="flex flex-wrap items-center justify-between -m-6">
-                        <div class="w-full md:w-1/2 p-6">
-                            <div class="md:max-w-md">
-                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Poznaj
-                                    Terraform startuje już niedługo</p>
+                        <div class="w-full md:w-2/3 p-6">
+                            <div class="">
+                                <p class="mb-5 font-heading font-medium text-xl text-gray-900 text-opacity-60">Dołącz do
+                                    Poznaj Terraform w przedsprzedaży
+                                </p>
                                 <h2 class="font-heading font-bold text-5xl sm:text-6xl text-gray-900">Chcesz dowiedzieć
-                                    się więcej o Terraform?</h2>
+                                    się więcej o Terraform? Dołącz do innych chętnych wiedzy!</h2>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/2 p-6">
+                        <div class="w-full md:w-1/3 p-6">
                             <div class="flex flex-wrap justify-end -m-2">
                                 <div class="w-full xl:w-auto p-2">
-                                    <button onclick="ml('show', 'XCycHU', true)"
-                                        class="ml-onclick-form font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Dołącz
-                                        do nas!</button>
+                                    <button
+                                        onclick="location.href='https://dolacz.architekturaikontenery.pl/cart/add_product/poznaj-terraform-przedsprzedaz';"
+                                        class="font-heading py-5 px-10 block w-full uppercase text-xs tracking-px text-gray-900 font-bold bg-white hover:bg-gray-50 rounded-md">Dołącz
+                                        już teraz!</button>
                                 </div>
                             </div>
                         </div>
