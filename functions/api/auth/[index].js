@@ -7,21 +7,23 @@ function validateEmail(email) {
 
 export async function onRequestGet(context) {
     const key = context.params.index;
+    console.log(key);
     if (!validateEmail(key)) {
         return new Response(null, { status: 401 });
     }
     const response = await fetch(`https://connect.mailerlite.com/api/subscribers/${key}`, {
         headers: {
             Accept: "application/json",
+            "Content-Type": "application/json",
             Authorization: "Bearer " + context.env.MAILERLITE_APIKEY
         }
     });
     if (response.ok) {
         const responseBody = await response.json();
-        if (responseBody.type == 'active') {
+        if (responseBody.data.status == 'active') {
             const token = await jwt.sign({
-                name: responseBody.name,
-                email: responseBody.email,
+                name: responseBody.data.fields.name,
+                email: responseBody.data.email,
                 exp: Math.floor(Date.now() / 1000) + (7 * 24 * (60 * 60))
             }, context.env.SECRET_JWT);
             return new Response(token);

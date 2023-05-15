@@ -26,7 +26,7 @@
     "watch-js-watch": "esbuild src/js/watch.js --bundle --sourcemap=inline --target=es2017 --outfile=public/js/watch.js --watch",
     "watch-js-vod": "esbuild src/js/vod.js --bundle --sourcemap=inline --target=es2017 --outfile=public/js/vod.js --watch",
     "cf-watch": "npm-run-all build --parallel watch-* cf",
-    "cf": "wrangler pages dev public/ --kv dev --persist --live-reload  --local"
+    "cf": "wrangler pages dev public/ --kv dev --persist --live-reload  --local --compatibility-date=2023-05-15"
   },
   "dependencies": {
     "@alpinejs/collapse": "^3.12.1",
