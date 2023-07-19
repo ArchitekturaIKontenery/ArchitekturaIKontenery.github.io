@@ -22,7 +22,7 @@ window.auth = async function (mail) {
     localStorage.setItem('accessToken', token);
     return true;
   } else {
-    ml('show', 'XCycHU', true);
+    ml('show', 'm2GaB1', true);
     return false;
   }
 }
